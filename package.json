@@ -2,7 +2,7 @@
   "name": "custom-graphiql",
   "version": "1.0.0",
   "description": "A custom GraphiQL wrapper.",
-  "main": "dist/js/custom-graphiql.js",
+  "main": "dist/custom-graphiql.js",
   "author": "Lorenzo Ruiz <lars.bs@hotmail.com>",
   "license": "MIT",
   "scripts": {
