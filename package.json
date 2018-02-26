@@ -1,0 +1,37 @@
+{
+  "name": "custom-graphiql",
+  "version": "1.0.0",
+  "description": "A custom GraphiQL wrapper.",
+  "main": "index.js",
+  "author": "Lorenzo Ruiz <lars.bs@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:umd": "NODE_ENV=production webpack",
+    "build": "npm run clean && npm run build:umd"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/polyfill": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@babel/preset-stage-0": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.2",
+    "circular-dependency-plugin": "^4.4.0",
+    "copy-webpack-plugin": "^4.4.2",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.20.2",
+    "webpack": "^4.0.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "graphiql": "^0.11.11",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-transition-group": "^2.2.1"
+  }
+}
