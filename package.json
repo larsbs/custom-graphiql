@@ -1,8 +1,8 @@
 {
-  "name": "custom-graphiql",
-  "version": "1.0.0",
+  "name": "yagw-core",
+  "version": "1.0.1",
   "description": "A custom GraphiQL wrapper.",
-  "main": "dist/custom-graphiql.js",
+  "main": "dist/yagw-core.js",
   "author": "Lorenzo Ruiz <lars.bs@hotmail.com>",
   "license": "MIT",
   "scripts": {

@@ -23,7 +23,7 @@ module.exports = {
     symlinks: false,  // Disable to allow resolve peerDependencies in symlinked packages
   },
   entry: {
-    'custom-graphiql': './src/index.js',
+    'yagw-core': './src/index.js',
   },
   output: {
     library: 'CustomGraphiQL',

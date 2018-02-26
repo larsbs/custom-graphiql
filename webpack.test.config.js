@@ -22,7 +22,7 @@ module.exports = Object.assign({}, webpackConfig, {
     sourceMapFilename: '[name].js.map',
   },
   entry: {
-    'custom-graphiql': [
+    'yagw-core': [
       '@babel/polyfill',
       './test/index.js',
     ],
