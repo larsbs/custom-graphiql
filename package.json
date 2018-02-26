@@ -9,7 +9,7 @@
     "clean": "rimraf dist",
     "start-test": "NODE_ENV=development webpack-dev-server --config webpack.test.config.js",
     "start": "npm run build && npm run start-test",
-    "build:umd": "NODE_ENV=development webpack",
+    "build:umd": "NODE_ENV=production webpack",
     "build": "npm run clean && npm run build:umd",
     "prepublish": "npm run build"
   },
