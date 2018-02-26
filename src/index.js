@@ -1,2 +1,2 @@
-import Main from './src/components/Main';
+import Main from './components/Main';
 export default Main;

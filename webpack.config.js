@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HTMLPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -24,18 +23,15 @@ module.exports = {
     symlinks: false,  // Disable to allow resolve peerDependencies in symlinked packages
   },
   entry: {
-    'custom-graphiql': [
-      '@babel/polyfill',
-      './src/index.js',
-    ],
+    'custom-graphiql': './src/index.js',
   },
   output: {
     library: 'CustomGraphiQL',
     libraryTarget: 'umd',
     path: resolve('dist'),
     publicPath: '',
-    filename: 'js/[name].js',
-    sourceMapFilename: 'js/[name].js.map',
+    filename: '[name].js',
+    sourceMapFilename: '[name].js.map',
   },
   plugins: [
     new CircularDependencyPlugin({
@@ -46,9 +42,9 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
     new CopyPlugin([
-      { from: 'node_modules/graphiql/graphiql.css', to: 'styles/graphiql.css' },
+      { from: 'node_modules/graphiql/graphiql.css', to: 'graphiql.css' },
     ]),
-    new ExtractTextPlugin('styles/[name].css'),
+    new ExtractTextPlugin('[name].css'),
   ],
   externals: {
   },
@@ -56,7 +52,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [ resolve('src') ],
+        exclude: /node_modules|dist/,
         use: [
           {
             loader: 'babel-loader',

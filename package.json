@@ -2,12 +2,14 @@
   "name": "custom-graphiql",
   "version": "1.0.0",
   "description": "A custom GraphiQL wrapper.",
-  "main": "index.js",
+  "main": "dist/js/custom-graphiql.js",
   "author": "Lorenzo Ruiz <lars.bs@hotmail.com>",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
-    "build:umd": "NODE_ENV=production webpack",
+    "start-test": "NODE_ENV=development webpack-dev-server --config webpack.test.config.js",
+    "start": "npm run build && npm run start-test",
+    "build:umd": "NODE_ENV=development webpack",
     "build": "npm run clean && npm run build:umd"
   },
   "devDependencies": {
@@ -22,10 +24,17 @@
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.9",
+    "html-webpack-plugin": "^2.30.1",
+    "ignore-loader": "^0.1.2",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
+    "modern-normalize": "^0.4.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.1",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.20.2",
-    "webpack": "^4.0.1"
+    "webpack": "3",
+    "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
     "classnames": "^2.2.5",
